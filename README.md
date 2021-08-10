@@ -13,7 +13,7 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 •	Metric beat is an extremely easy-to-use, efficient and reliable metric shipper for monitoring your system and the processes running on it. The configuration details of each machine may be found below.
 
 
-       Name	                   Function	                   IP Address	                              Operating System
+ 
 Jump-Box-Provisioner	          Gateway	         Public:20.106.166.233    Private: 10.2.0.4	        Linux-ubuntu 20.04
 Web-1	                          Server	         Public: N/A              Private: 10.0.0.7	        Linux-ubuntu 20.04
 Web-2	                          Server	         Public: N/A              Private: 10.0.0.6	        Linux-ubuntu 20.04
