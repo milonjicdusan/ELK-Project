@@ -63,5 +63,26 @@ This ELK server is configured to monitor the following machines:
 
 Name	    IP Address
 Web-1	    10.0.0.7
-Web-2	    [ELK stack Project.docx](https://github.com/milonjicdusan/scripts/files/6965003/ELK.stack.Project.docx)
-10.0.0.6
+Web-2	    10.0.0.6
+
+
+I have installed the following Beats on these machines:
+•	Filebeat
+•	Metricbeat 
+
+Name	     IP Address
+Web-1	     10.0.0.7
+Web-2	     10.0.0.6
+ELK-Server  104.209.242.228
+
+These Beats allow us to collect the following information from each machine: -filebeat collects log data and shows them in the monitoring clusters. -metricbeat collects metrics and statistics and shows them in the output specified, for example Elasticsearch or Logstash.
+
+Using the Playbook
+In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
+
+SSH into the control node and follow the steps below:
+
+•	Copy the playbook (.yml) file to Ansible directory.
+•	Update the host file to include webserver and ELK.
+•	Run the playbook and navigate to Kibana to check that the installation worked as expected. (http://[your.VM.IP]:5601/app/kibana )
+
