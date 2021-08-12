@@ -48,46 +48,38 @@ A summary of the access policies in place can be found in the table below.
 | Name       | Publicly Accessible  | Allowed IP Address |
 |------------|----------------------|--------------------|
 | Jump Box   | yes                  | 73.73.60.19        |
-| Web-1      | no                   | 10.0.0.8           |
-| Web-2      | no                   | 10.0.0.8           |
-| ELK-Server | no                   | 10.0.0.8           |
+| Web-1      | no                   | 10.0.0.4           |
+| Web-2      | no                   | 10.0.0.4           |
+| ELK-Server | no                   | 10.0.0.4           |
 
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it was easy to do and prevented any easily overloook vulnerablities. 
 
 The playbook implements the following tasks:
-- Install docker.io
+
+- Configures the machine with Docker
+- Install docker.io and pip3
 - Install python3-pip
-- Install docker via pip
-- Increase vitual memory  
-- Use more memory 
-- Download and launch a docker elk container - starts docker and establishes the ports being used.  
-
-The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
-
-!ELK-Stack-Project/Diagrams/Screen Shot 2020-12-09 at 4.52.41 PM.png
+- Downloads and configures ELK docker container
+- Activates ports 5601, 9200, 5044  
 
 ### Target Machines & Beats
+
 This ELK server is configured to monitor the following machines:
-| Name  | IP Address  |
-|-------|-------------|
-| Web-1 | 10.0.0.7    |
-| Web-2 | 10.0.0.6    |
+1.	Web-1 10.0.0.6
+2.	Web-2 10.0.0.5
 
-I have installed the following Beats on these machines:
-- Filebeat
-- Metricbeat 
+We have installed the following Beats on these machines:
 
-| Name       | IP Address      |
-|------------|--------------   |
-| Web-1      | 10.0.0.7        |
-| Web-2      | 10.0.0.6        |
-| ELK-Server | 104.209.242.228 |
+1.	Filebeat
+2.	Metricbeat
 
 These Beats allow us to collect the following information from each machine:
--filebeat collects log data and shows them in the monitoring clusters. 
--metricbeat collects metrics and statistics and shows them in the output specified, for example Elasticsearch or Logstash. 
+
+1.	Filebeat watches for log files/locations and collects events related to those files and locations.
+2.	Metricbeat records metrics and statistical data from the operating system and services that are running on the server.
+ 
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
@@ -95,6 +87,4 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 - Copy the playbook (.yml) file to Ansible directory.
 - Update the host file to include webserver and ELK. 
-- Run the playbook, and navigate to Kibana to check that the installation worked as expected. 
-   ( http://[your.VM.IP]:5601/app/kibana )
 
