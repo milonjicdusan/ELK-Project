@@ -27,12 +27,12 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - Metricbeat is an extremely easy-to-use, efficient and reliable metric shipper for monitoring your system and the processes running on it. 
 The configuration details of each machine may be found below.
 
-| Name       | Function   | IP Address                              | Operating System |
-|------------|------------|-----------------------------------------|------------------|
-| Jump-Box   | Gateway    | Public: 40.86.73.173 Private: 10.0.0.8  | Linux            |
-| Web-1      | Server     | Public: N/A          Private: 10.0.0.9  | Linux            |
-| Web-2      | Server     | Public: N/A          Private: 10.0.0.10 | Linux            |
-| ELK-Server | Monitoring | Public: 52.137.81.98 Private: 10.2.0.4  | Linux            |
+| Name       | Function   | IP Address                                | Operating System |
+|------------|------------|-----------------------------------------  |------------------|
+| Jump-Box   | Gateway    | Public: 20.106.166.233 Private: 10.2.0.4  | Linux            |
+| Web-1      | Server     | Public: N/A          Private: 10.0.0.7    | Linux            |
+| Web-2      | Server     | Public: N/A          Private: 10.0.0.6    | Linux            |
+| ELK-Server | Monitoring | Public: 104.209.242.228 Private: 10.1.0.4 | Linux            |
 
 ### Access Policies
 
@@ -72,18 +72,18 @@ The following screenshot displays the result of running `docker ps` after succes
 This ELK server is configured to monitor the following machines:
 | Name  | IP Address  |
 |-------|-------------|
-| Web-1 | 10.0.0.9    |
-| Web-2 | 10.0.0.10   |
+| Web-1 | 10.0.0.7    |
+| Web-2 | 10.0.0.6    |
 
 I have installed the following Beats on these machines:
 - Filebeat
 - Metricbeat 
 
-| Name       | IP Address   |
-|------------|--------------|
-| Web-1      | 10.0.0.9     |
-| Web-2      | 10.0.0.10    |
-| ELK-Server | 52.137.81.98 |
+| Name       | IP Address      |
+|------------|--------------   |
+| Web-1      | 10.0.0.7        |
+| Web-2      | 10.0.0.6        |
+| ELK-Server | 104.209.242.228 |
 
 These Beats allow us to collect the following information from each machine:
 -filebeat collects log data and shows them in the monitoring clusters. 
