@@ -1,6 +1,6 @@
 ---
 - name: Config ELK VM with Docker
-  hosts: 52.137.81.98
+  hosts: 104.209.242.228
   remote_user: milonjicdusan
   become: true
   tasks:
