@@ -1,7 +1,7 @@
 ---
 - name: Config ELK VM with Docker
   hosts: 52.137.81.98
-  remote_user: azShomari
+  remote_user: milonjicdusan
   become: true
   tasks:
     - name: Install docker.io
